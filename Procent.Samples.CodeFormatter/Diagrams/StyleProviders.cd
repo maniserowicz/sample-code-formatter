@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Procent.Samples.CodeFormatter.StyleProviders.CSharpStyleProvider" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2.75" Width="2.5" />
+    <Members>
+      <Method Name="CSharpStyleProvider" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StyleProviders\CSharpStyleProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Procent.Samples.CodeFormatter.StyleProviders.CustomStyleProvider" BaseTypeListCollapsed="true">
+    <Position X="8" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StyleProviders\CustomStyleProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Procent.Samples.CodeFormatter.Chain.CssDecoratingElement" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAACAAAAAAAAAECBSAAAgAAAAAg=</HashCode>
+      <FileName>Chain\CssDecoratingElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InlineStyleProvider" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Procent.Samples.CodeFormatter.StyleProviders.IInlineStyleProvider">
+    <Position X="5.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StyleProviders\IInlineStyleProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

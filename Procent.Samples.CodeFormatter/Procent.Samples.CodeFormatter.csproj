@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B852F50C-4F8C-4ACE-8A37-4F16D297DEB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Procent.Samples.CodeFormatter</RootNamespace>
+    <AssemblyName>Procent.Samples.CodeFormatter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DocumentationFile>bin\Debug\Procent.Samples.CodeFormatter.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Procent.Samples.CodeFormatter.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chain\ChainElement.cs" />
+    <Compile Include="Chain\Generic\CopyrightWriter.cs" />
+    <Compile Include="Chain\CssDecoratingElement.cs" />
+    <Compile Include="Chain\Generic\DirectivesFormatter.cs" />
+    <Compile Include="Chain\CSharp\DocumentationFormatter.cs" />
+    <Compile Include="Chain\Generic\HtmlEncoder.cs" />
+    <Compile Include="Chain\Generic\KeywordsFormatter.cs" />
+    <Compile Include="Chain\Generic\LinesCounter.cs" />
+    <Compile Include="Chain\CSharp\MultiLineCommentsFormatter.cs" />
+    <Compile Include="Chain\CSharp\SingleLineCommentsFormatter.cs" />
+    <Compile Include="Chain\CSharp\StringsFormatter.cs" />
+    <Compile Include="Chain\Generic\Wrapper.cs" />
+    <Compile Include="CodeFormatter.cs" />
+    <Compile Include="CSharpFormatter.cs" />
+    <Compile Include="StyleProviders\CSharpStyleProvider.cs" />
+    <Compile Include="StyleProviders\CustomStyleProvider.cs" />
+    <Compile Include="StyleProviders\IInlineStyleProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CSharpKeywords.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CSharpDefaultStyles.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\ChainElement.cd" />
+    <None Include="Diagrams\ChainWithDecorating.cd" />
+    <None Include="Diagrams\CodeFormatters.cd" />
+    <None Include="Diagrams\FullChain.cd" />
+    <None Include="Diagrams\StyleProviders.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

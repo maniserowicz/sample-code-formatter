@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Procent.Samples.CodeFormatter</name>
+    </assembly>
+    <members>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.CSharp.SingleLineCommentsFormatter">
+            <summary>
+            Formats single-line C# comments.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement">
+            <summary>
+            An abstract representation of element decorating strings with CSS styles. CSS styles can be formatted inline or as CSS class names.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.ChainElement">
+            <summary>
+            Base for all processing chain elements.
+            </summary>
+        </member>
+        <member name="M:Procent.Samples.CodeFormatter.Chain.ChainElement.Attach(Procent.Samples.CodeFormatter.Chain.ChainElement)">
+            <summary>
+            Attaches a new element to the chain. Newly attached element gets returned.
+            </summary>
+            <param name="next">An element to attach.</param>
+            <returns>Newly attached element.</returns>
+        </member>
+        <member name="P:Procent.Samples.CodeFormatter.Chain.ChainElement._isEndOfChain">
+            <summary>
+            True if there is no further chain attached; otherwise - false.
+            </summary>
+        </member>
+        <member name="M:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement.GetStyleFragment">
+            <summary>
+            Gets an appropriate css style string. Can be inline css definition or a css class attribute, depending on <see cref="P:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement.InjectInlineCss"/> setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement.InlineStyleProvider">
+            <summary>
+            Gets/sets a provider containing css styles definitions for injecting styles inline.
+            </summary>
+        </member>
+        <member name="P:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement.InjectInlineCss">
+            <summary>
+            Gets/sets a value which determines the way styles are formatted. True for inline css definition injections; false for css class names.
+            </summary>
+        </member>
+        <member name="P:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement.CssClass">
+            <summary>
+            Gets/sets a css class name associated with this <see cref="T:Procent.Samples.CodeFormatter.Chain.CssDecoratingElement"/>. If null - a default class name is used.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.CSharp.DocumentationFormatter">
+            <summary>
+            Formats XML documentation in C# code.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.HtmlEncoder">
+            <summary>
+            Converts a string to an HTML-encoded string.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.CopyrightWriter">
+            <summary>
+            Adds a copyright note to the string.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.CSharp.StringsFormatter">
+            <summary>
+            Formats string literals.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.Wrapper">
+            <summary>
+            Wraps the whole content into a single panel.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.KeywordsFormatter">
+            <summary>
+            Formats keywords.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.DirectivesFormatter">
+            <summary>
+            Formats compiler directives (starting with #).
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.CSharpFormatter">
+            <summary>
+            Prepares C# code to be viewed in an HTML page.
+            </summary>
+        </member>
+        <member name="M:Procent.Samples.CodeFormatter.CSharpFormatter.#ctor(System.Boolean)">
+            <param name="inlineCss">True if css styles should be embedded inline; otherwise - false. Default is true.</param>
+        </member>
+        <member name="M:Procent.Samples.CodeFormatter.CSharpFormatter.#ctor(Procent.Samples.CodeFormatter.StyleProviders.IInlineStyleProvider)">
+            <param name="styleProvider">An implementation of <see cref="T:Procent.Samples.CodeFormatter.StyleProviders.IInlineStyleProvider"/> which contains styles to be embedded inline.<br/>
+            Default provider reads preconfigured styles from resources.</param>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.Generic.LinesCounter">
+            <summary>
+            Adds line numbers.
+            </summary>
+        </member>
+        <member name="T:Procent.Samples.CodeFormatter.Chain.CSharp.MultiLineCommentsFormatter">
+            <summary>
+            Formats multiline C# comments.
+            </summary>
+        </member>
+    </members>
+</doc>

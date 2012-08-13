@@ -1,0 +1,7 @@
+﻿csharp|color: #fff; line-height:12px; font-family: Consolas, Courier; background-color: #333; white-space: pre-wrap,-moz-pre-wrap !important,-pre-wrap,-o-pre-wrap; word-wrap: break-word;
+csComment|color: #008000;
+csDocumentation|color: #aaa;
+csKeyword|color: #00aaff;
+csString|color: #E0551D;
+csDirective|color: #f00;
+csLineNumber|color: #2B91AF;
